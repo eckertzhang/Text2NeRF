@@ -1,0 +1,46 @@
+
+datadir = /apdcephfs/share_1330077/eckertzhang/Dataset/data_for_text2nerf
+expname =  debug
+basedir = /apdcephfs/private_eckertzhang/Codes/Results/Results_text2nerf
+dataset_name = scene_gen
+
+n_iters = 5000
+batch_size = 4096
+step_ratio = 1.0
+
+N_voxel_init = 2097156 # 128**3=2097156
+N_voxel_final = 2097156 # 156**3
+#upsamp_list = [2000,3000,4000,5500,7000]
+#update_AlphaMask_list = [2000,4000]
+upsamp_list = [2000,3000,4000]
+update_AlphaMask_list = []
+
+N_vis = 12
+vis_every = 5000
+
+render_test = 1
+
+n_lamb_sigma = [16,16,16]
+n_lamb_sh = [48,48,48]
+model_name = TensorVMSplit
+
+
+shadingMode = MLP_Fea_noview
+fea2denseAct = softplus
+
+pos_pe = 6
+view_pe = 2
+fea_pe = 6
+
+TV_weight_density = 0.1
+TV_weight_app = 0.01
+
+rm_weight_mask_thre = 1e-4
+
+## please uncomment following configuration if hope to training on cp model
+#model_name = TensorCP
+#n_lamb_sigma = [96]
+#n_lamb_sh = [288]
+#N_voxel_final = 125000000 # 500**3
+#L1_weight_inital = 1e-5
+#L1_weight_rest = 1e-5
