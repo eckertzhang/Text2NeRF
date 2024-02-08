@@ -28,7 +28,7 @@ CUDA_VISIBLE_DEVICES=0 python text2nerf_main.py --config 'configs/text2nerf_scen
 ```
 #### 360-Degree Scene Generation
 ```
-CUDA_VISIBLE_DEVICES=0 python text2nerf_main.py --config 'configs/text2nerf_scenes.txt' --expname 'text000_360' --prompt 'a beautiful garden' --datadir 'data_example/text000' --pose_traj 'circle0' --regen_pose
+CUDA_VISIBLE_DEVICES=0 python text2nerf_main.py --config 'configs/text2nerf_scenes.txt' --expname 'text000_360' --prompt 'a beautiful garden' --datadir 'data_example/text000' --pose_traj 'circle' --regen_pose
 ```
 
 
